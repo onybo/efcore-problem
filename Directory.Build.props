@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup Label="Build">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NuGetAuditMode>all</NuGetAuditMode>
+  </PropertyGroup>
+</Project>
