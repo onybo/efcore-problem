@@ -21,3 +21,11 @@ dotnet publish --runtime ubuntu.24.10-x64 --output /tmp/4bdomrr0.dao/publish --n
 
 The problem seems to be related to the `Microsoft.EntityFramework.SqlServer` nuget package, as it does not happen if we
 use Sqlite (`Microsoft.EntityFrameworkCore.Sqlite`) instead of SqlServer
+
+To reproduce the problem do the following:
+- Clone the repo and cd into it
+- install the ef tool: `dotnet tool install dotnet-ef`
+- cd into src: `cd src`
+- attempt to create a bundle: `dotnet ef migrations bundle --verbose`
+
+After the last step you should see error message similar to the one described above.
